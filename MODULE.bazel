@@ -1,0 +1,24 @@
+module(
+    name = "gala_demo_pkg_import_bazel",
+    version = "0.0.1",
+)
+
+# GALA toolchain
+bazel_dep(name = "gala")
+local_path_override(
+    module_name = "gala",
+    path = "../gala_simple",
+)
+
+# Go rules
+bazel_dep(name = "rules_go", version = "0.50.1")
+bazel_dep(name = "gazelle", version = "0.39.1")
+
+# Go dependencies (needed for gazelle to know about transitive deps)
+go_deps = use_extension("@gazelle//:extensions.bzl", "go_deps")
+go_deps.from_file(go_mod = "//:go.mod")
+
+# GALA dependencies
+gala = use_extension("@gala//:extensions.bzl", "gala")
+gala.from_file(gala_mod = "//:gala.mod")
+use_repo(gala, "com_github_martianoff_gala_demo_pkg")

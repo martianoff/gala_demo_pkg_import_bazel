@@ -1,0 +1,9 @@
+load("@gala//:gala.bzl", "gala_binary")
+
+gala_binary(
+    name = "demo",
+    src = "main.gala",
+    deps = [
+        "@com_github_martianoff_gala_demo_pkg//:demomath",
+    ],
+)
