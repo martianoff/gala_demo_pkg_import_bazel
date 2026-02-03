@@ -187,7 +187,7 @@
   "moduleExtensions": {
     "@@gala+//:extensions.bzl%gala": {
       "general": {
-        "bzlTransitiveDigest": "5d/gbCJBQi+RIpP4k1hE7OiBISmR7Yi1L0D0ekWozCw=",
+        "bzlTransitiveDigest": "a/qw9NkXV2hglfAq4z3gLKfmug8qgUPxL/QViSknTV4=",
         "usagesDigest": "pKC0QYGwOpn8v6EOw9ZTb4hTdar5Jwu37j1Cz2U1a2k=",
         "recordedFileInputs": {
           "@@//gala.mod": "4421d044913eedce991fa036e2ba963b8752940ccedbc746088c50e02d926520"
